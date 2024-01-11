@@ -10,8 +10,9 @@ namespace ConsoleAppClassCar
     {
         static void Main(string[] args)
         {
-            Class_Car car1 = new Class_Car();
-            
+            Fuel fuel1 = new Fuel();
+            fuel1.CarToGo();
+            Class_Car car1 = new Class_Car();            
             car1.Stop();
             car1.PrintSpeed();
             car1.Forward();
@@ -21,8 +22,9 @@ namespace ConsoleAppClassCar
 
             Console.WriteLine();
 
-            Class_Car car2 = new Class_Car();
-            
+            Fuel fuel2 = new Fuel();
+            fuel2.CarToGo();
+            Class_Car car2 = new Class_Car();            
             car2.Stop();
             car2.PrintSpeed();
             car2.Backward();
