@@ -10,13 +10,25 @@ namespace ConsoleAppClassCar
     {
         static void Main(string[] args)
         {
-            Console.Write("Введите скорость с которой едет машина: ");
-            string s = Console.ReadLine();
+            Class_Car car1 = new Class_Car();
+            
+            car1.Stop();
+            car1.PrintSpeed();
+            car1.Forward();
+            car1.PrintSpeed();
+            car1.Stop();
+            car1.PrintSpeed();
 
-            int.TryParse(s, out int result);
+            Console.WriteLine();
 
-            Class_Car car = new Class_Car();
-            car.Movie(result);
+            Class_Car car2 = new Class_Car();
+            
+            car2.Stop();
+            car2.PrintSpeed();
+            car2.Backward();
+            car2.PrintSpeed();
+            car2.Stop();
+            car2.PrintSpeed();
 
             Console.ReadLine();
         }
