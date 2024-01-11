@@ -9,26 +9,35 @@ namespace ConsoleAppClassCar
 {
     internal class Class_Car
     {
-        public int Forward = 60;
-        public int Backward = -5;
-        public int Stop = 0;
+        private int Speed;
 
-        public void Movie()
+        public void Forward()
         {
-            if (this.Forward >= 60)
+            Speed = 60;
+        }
+        public void Backward() 
+        {
+            Speed = -5;
+        }
+        public void Stop()
+        {
+            Speed = 0;
+        }
+        public void PrintSpeed()
+        {
+            if (Speed > 0)
             {
-                Console.WriteLine("Машина едет со скоростью 60 или более километров в час "); 
+                Console.WriteLine("Машина едет вперед");
             }
-            if (this.Backward == -5)
+            if (Speed < 0)
             {
-                Console.WriteLine("Машина едет назад ");
+                Console.WriteLine("Машина едет назад");
             }
-            if (this.Stop == 0)
+            if (Speed == 0)
             {
                 Console.WriteLine("Машина стоит");
-            }                    
-            
-        } 
+            }
+        }
 
     }
 }
